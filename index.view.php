@@ -14,23 +14,20 @@
   </style>
 </head>
 <body>
-   
+    
   <header>
 
     <ul>
       <li>
-        <strong>Name:</strong> <?= $task['title']; ?>
+        <strong>Status: </strong> 
+        <?php
+        if ($task['completed']) {
+          echo 'Complete';
+        } else {
+          echo 'Incomplete';
+        }
+        ?>
       </li>
-      <li>
-        <strong>Due Date:</strong> <?= $task['due']; ?>
-      </li>
-      <li>
-        <strong>Personal responsible:</strong> <?= $task['assigned_to']; ?>
-      </li>
-      <li>
-        <strong>Status:</strong> <?= $task['completed'] ? 'Complete' : 'Incomplete'; ?>
-      </li>
-      
     </ul>
       
 
